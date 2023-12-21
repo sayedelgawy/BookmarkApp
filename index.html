@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="icon" href="./images/bookmark.png" />
+
+    <!-- font awsome icons -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!--google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- main style file -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- media query styles -->
+    <link rel="stylesheet" href="./css/media.css" />
+  </head>
+
+  <body>
+    <main class="py-5">
+      <div class="container text-center">
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="myModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="circles d-flex">
+                  <span class="rounded-circle me-2"></span>
+                  <span class="rounded-circle me-2"></span>
+                  <span class="rounded-circle me-2"></span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-start">
+                <p class="m-0 pb-2 modal-headline">
+                  Site Name or Url is not valid, Please follow the rules below :
+                </p>
+                <ol class="rules list-unstyled m-0">
+                  <li>
+                    <i class="fa-regular fa-circle-right p-2"></i>Site name must
+                    contain at least 3 characters
+                  </li>
+                  <li>
+                    <i class="fa-regular fa-circle-right p-2"></i>Site URL must
+                    be a valid one
+                  </li>
+                </ol>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Ok
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <header of bookmarks app> -->
+        <h1 class="py-2">
+          Bookmarker
+          <sapn class="layer"></sapn>
+        </h1>
+        <!-- </header of bookmarks app> -->
+
+        <!-- <form inputs of bookmarks app> -->
+        <div class="bookmark-body py-4 mt-5">
+          <h2 class="pb-3">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+          <div class="input pb-4">
+            <label
+              for="bookmarkName"
+              class="pb-2 fw-semibold text-start d-block"
+            >
+              <i class="fa-solid fa-book-bookmark pe-2"></i>
+              Site Name</label
+            >
+            <input
+              type="text"
+              placeholder="Bookmark Name"
+              class="form-control"
+              id="bookmarkName"
+            />
+          </div>
+          <div class="input pb-4">
+            <label
+              for="bookmarkURL"
+              class="pb-2 fw-semibold text-start d-block"
+            >
+              <i class="fa-solid fa-link pe-2"></i>Site URL</label
+            >
+            <input
+              type="url"
+              placeholder="Website URL"
+              class="form-control"
+              id="bookmarkURL"
+            />
+          </div>
+          <button class="btn btn-submit px-5" id="submitBtn">Submit</button>
+        </div>
+        <!-- </form inputs of bookmarks app> -->
+
+        <!-- <table of bookmarks> -->
+        <table class="table-light table mt-4 text-center">
+          <thead>
+            <tr>
+              <th class="text-capitalize">index</th>
+              <th class="text-capitalize">Website Name</th>
+              <th class="text-capitalize">Visit</th>
+              <th class="text-capitalize">Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tableContent"></tbody>
+        </table>
+        <!-- </table of bookmarks> -->
+      </div>
+    </main>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
